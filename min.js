@@ -1,0 +1,2 @@
+/*! (c) Andrea Giammarchi - ISC */
+var self=this||{};!function(n){function r(n){return n===u?"\\u2028":"\\u2029"}var u="\u2028",e=/\u2028|\u2029/g,i=n.stringify;self.JSON=i(u)==='"'+u+'"'?{parse:n.parse,stringify:function(n,u,t){return i.apply(null,arguments).replace(e,r)}}:n}(JSON);
