@@ -1,2 +1,2 @@
 /*! (c) Andrea Giammarchi - ISC */
-var self=this||{};!function(n){var r="\u2028",e=/\u2028|\u2029/g,i=n.stringify;function t(n){return n===r?"\\u2028":"\\u2029"}self.JSON=i(r)==='"'+r+'"'?{parse:n.parse,stringify:function(n,r,u){return i.apply(null,arguments).replace(e,t)}}:n}(JSON);
+var self=this||{};!function(t){var n="\u2028",s=/^[\uD800-\uDBFF]$/,a=/^[\uDC00-\uDFFF]$/,e=/[\u2028\u2029\uD800-\uDFFF]/g,i=t.stringify;function c(t,u,r){return t===n||"\u2029"===t||function(t,u,r){var n=r.charAt(u-1),e=r.charAt(u+1);return s.test(t)&&!a.test(e)||a.test(t)&&!s.test(n)}(t,u,r)?"\\u"+t.charCodeAt(0).toString(16):t}self.JSON=i(n)==='"'+n+'"'?{parse:t.parse,stringify:function(t,u,r){return i.apply(null,arguments).replace(e,c)}}:t}(JSON);
