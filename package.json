@@ -1,6 +1,6 @@
 {
   "name": "@ungap/json",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "JSON with latest ECMAScript fixes",
   "main": "cjs/index.js",
   "module": "esm/index.js",
